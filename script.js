@@ -97,26 +97,27 @@ function numberPrompt () {
 
 function lengthPrompt () {
   var lengthAnswer = window.prompt("How many characters are required in your password? Please enter a number between 12 and 128.");
-  var passwordLength = Number(lengthAnswer);//converts the user answer from a string to a number using the Number() method(Resource W3)
+  passwordLength = Number(lengthAnswer);//converts the user answer from a string to a number using the Number() method(Resource W3)
 
     if (passwordLength >= 12 && passwordLength <= 128) {//boolean statement to ensure the user's response to the required character limits
       console.log (lengthAnswer);
-    } else if (passwordLength < 12 || passwordLength > 128) {//alerts user if their response is not within the chatacter limits
+    } else if (passwordLength < 12 || passwordLength > 128) {//alerts user if their response is not within the character limits
       window.alert("Invalid response. Password length must be between 12 and 128 characters.");
       lengthPrompt ();
     }randomizeCharacters ();//calls the next function to randomize the possible characters
   }
 
 
-function randomizeCharacters () {//establishes a function to randomize charactersS
+function randomizeCharacters () {//establishes a function to randomize characters
+  let password = ("");//creates empty string for password
 
-
-  
-  for (let i = 0; i <= passwordLength, i++;) {
-    const randomCharacters = Math.floor(Math.random() * possibleCharacters.length)//randomizes characters by selecting random integers associated with a character's space on the string of possibleCharacters
-  }
-  console.log (randomCharacters)
+  for (let i = 0; i <= passwordLength; i++) {//establishes parameters to limit the number of integers assigned to the possible characters. Fixed , and ;
+    const randomIndex = Math.floor(Math.random() * possibleCharacters.length);//associates integers involved in selecting random characters from string
+    password += possibleCharacters[randomIndex];
+  }console.log (password);
+  passwordField.textContent = (password);
 }
+
 // function randomizeCharacters () {
 //     randomCharacters = randomizeCharacters (possibleCharacters);
 //     for (let i = possibleCharacters.length - 1; i > 0; i--) {
