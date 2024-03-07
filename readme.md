@@ -8,6 +8,7 @@
     style.css
 
 ##Link to website: https://katherine-be.github.io/Module3_Challenge/
+https://github.com/Katherine-Be/Module3_Challenge
 
 '''md
 ![Website Screenshot](./assets/images/Module3_Challenge_screenshot.PNG)'''
