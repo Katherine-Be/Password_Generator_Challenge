@@ -20,8 +20,7 @@
 
 
 // Assignment code here
-//var passwordBtnEl = $('.password-btn');//Removed jquery I found with Chat GPT
-//var passwordDisplayEl = $('#password-display');
+
 const alphabet = ("abcdefghijklmnopqrstuvwxyz"); //change arrays to strings
 const numbers = ("123456789");
 
@@ -115,71 +114,5 @@ function randomizeCharacters () {//establishes a function to randomize character
     const randomIndex = Math.floor(Math.random() * possibleCharacters.length);//associates integers involved in selecting random characters from string
     password += possibleCharacters[randomIndex];
   }console.log (password);
-  passwordField.textContent = (password);
+  passwordField.textContent = (password);//changed the element content to the password
 }
-
-// function randomizeCharacters () {
-//     randomCharacters = randomizeCharacters (possibleCharacters);
-//     for (let i = possibleCharacters.length - 1; i > 0; i--) {
-//         const j = Math.floor(Math.random() * (i + 1));
-//         [possibleCharacters[i], possibleCharacters[j]] = [possibleCharacters[j], possibleCharacters[i]]; // Swap elements at indices i and j
-//     }
-//     generatePassword;
-//   }
-
-//   function generatePassword(passwordLength) {
-//     console.log ("passworlength", passwordLength)
-//     var pickedPassword = "";
-    
-
-//     for (var i = 0; i < passwordLength; i++) {//came across Fisher-Yates Shuffle to shuffle a string, resource: stackoverflow.com but it was unnecessary
-//       const random = Math.floor(Math.random() * possibleCharacters.length);
-// console.log (random)
-// console.log (possibleCharacters[random])
-//       pickedPassword += possibleCharacters[random];
-//     }
-//     console.log (pickedPassword)
-//     return pickedPassword
-//   }
-
-//   function printPassword() { //used Chat GPT to find how to insert the new password into the element, but it used JQuery
-//     var passwordBtnEl = $('.password-btn');
-//     button.innerHTML = "18 degrees";
-    
-// console.log(password);
-//   }
-
-
-
-
-// /*function generatePassword(passwordLength, possibleLetters) { //another attempt to randomize characters
-//     for (var i=0; i < passwordLength, i++;) {
-
-//     const randomIndex = Math.floor(Math.random() * possibleLetters.length);
-//     const randomChar = possibleLetters[randomIndex]
-  
-//     password = password + randomChar;
-
-    
-//   console.log(password);
-//   }};*/
-
-
-// // Assignment code here //I did not use this. I could not reason out how to start with this given code and later I finished the code to successfully meet requirements without it.
-
-
-// // Get references to the #generate element
-// var generateBtn = document.querySelector("#generate");
-
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-// }
