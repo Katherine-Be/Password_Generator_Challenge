@@ -31,8 +31,10 @@ var lowercaseLetters = alphabet.toLowerCase();
 
 var possibleCharacters = ("");//establish variables without block scope (to use in multiple functions)
 var generateBtn = document.querySelector("#generate");//establish button variable in js from html id
+var passwordField = document.querySelector("#password");//establishes a variable to insert the password into the html after it is generated
 
-generateBtn.addEventListener("click", capitalPrompt());//add event listener to button click which starts the first function
+generateBtn.addEventListener("click", capitalPrompt);//assigns captialPrompt to activate when the button is clicked
+
 
 
 function capitalPrompt() {
@@ -50,10 +52,10 @@ function capitalPrompt() {
     } else if (capitalAnswer !== "yes" && capitalAnswer !== "no") {
       window.alert("Invalid response.");//if user types anything other than yes or no, they are taken back to the beginning of the function/prompt
       capitalPrompt ();
-    }
-  }
+    }lowercasePrompt();//calls the next function, lowercasePrompt. Moved function calls after discussing placement with tutor after discussing why the lowercase prompt kept popping up first
+  }  
+
   
-  lowercasePrompt();//calls the next function, lowercasePrompt
 
 
 function lowercasePrompt () {
@@ -70,11 +72,10 @@ function lowercasePrompt () {
       } else if (lowercaseAnswer !== "yes" && lowercaseAnswer !== "no") {
         window.alert("Invalid response.");
         lowercasePrompt ();
-      }
+      }  numberPrompt ();//calls the third function
     }
 
   
-  numberPrompt ();//calls the third function
 
 function numberPrompt () {
   var numberAnswer = window.prompt("Does your password require NUMBERS? Please answer yes or no.");
@@ -90,10 +91,9 @@ function numberPrompt () {
       } else if (numberAnswer !== "yes" && numberAnswer !== "no") {
         window.alert("Invalid response.");
         numberPrompt ();
-      }
+      }lengthPrompt ();//calls the fourth function
     }
 
-lengthPrompt ();//calls the fourth function
 
 function lengthPrompt () {
   var lengthAnswer = window.prompt("How many characters are required in your password? Please enter a number between 12 and 128.");
@@ -104,10 +104,9 @@ function lengthPrompt () {
     } else if (passwordLength < 12 || passwordLength > 128) {//alerts user if their response is not within the chatacter limits
       window.alert("Invalid response. Password length must be between 12 and 128 characters.");
       lengthPrompt ();
-    }
+    }randomizeCharacters ();//calls the next function to randomize the possible characters
   }
 
-  randomizeCharacters ();//calls the next function to randomize the possible characters
 
 function randomizeCharacters () {//establishes a function to randomize charactersS
 
