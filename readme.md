@@ -7,11 +7,10 @@
     script.js
     style.css
 
-##Link to website: https://katherine-be.github.io/Module3_Challenge/
-https://github.com/Katherine-Be/Module3_Challenge
+##Link to website: https://katherine-be.github.io/Password_Generator_Challenge/
 
 '''md
-![Website Screenshot](./assets/images/Module3_Challenge_screenshot.PNG)'''
+![Website Screenshot](./assets/images/Password_Generator_Challenge_screenshot.PNG)'''
 
      Mimo - a mobile app for learning JS
      W3 - a resource for learning to code
